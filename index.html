@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .box {
+            padding: 25px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #ff3333;
+            animation: pulse 1s infinite;
+        }
+
+        #prank {
+            display: none;
+        }
+
+        .emoji {
+            font-size: 80px;
+        }
+
+        @keyframes pulse {
+            50% {
+                transform: scale(1.08);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div id="announcement">
+            <div class="emoji">🚨</div>
+            <h1>WALANG PASOK BUKAS!</h1>
+            <p>📢 Important Announcement</p>
+        </div>
+
+        <div id="prank">
+            <div class="emoji">😂</div>
+            <h1>IT'S A PRANK!</h1>
+            <p>Wag ka agad maniwala! 😆</p>
+        </div>
+
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("announcement").style.display = "none";
+            document.getElementById("prank").style.display = "block";
+        }, 5000);
+    </script>
+
+</body>
+</html>
